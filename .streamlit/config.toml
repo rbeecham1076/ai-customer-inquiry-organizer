@@ -1,0 +1,22 @@
+# Streamlit reads this file automatically when the app starts and uses it
+# to color every built-in component (buttons, inputs, tabs, charts).
+#
+# Setting the palette here instead of in CSS means Streamlit's own widgets
+# match the design without us having to override each one by hand.
+
+[theme]
+base = "light"
+
+# Coral - primary buttons, focus rings, active tabs.
+primaryColor = "#FF5A36"
+
+# Warm cream page background instead of plain white.
+backgroundColor = "#FFF8F0"
+
+# Deeper cream for inputs, the sidebar, and table headers.
+secondaryBackgroundColor = "#FFEFE2"
+
+# Deep plum-black - warmer and less harsh than pure black.
+textColor = "#1E1B2E"
+
+font = "sans serif"
