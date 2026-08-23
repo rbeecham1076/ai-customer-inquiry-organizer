@@ -2,11 +2,25 @@
 
 Turns unstructured customer messages into structured, reviewable support tasks — with a human approving every result before it counts.
 
-Built by **Rachel Beecham** · [GitHub](https://github.com/rbeecham1076)
+Built by **Rachel Beecham** · [LinkedIn](https://www.linkedin.com/in/rachel-beecham/) · [GitHub](https://github.com/rbeecham1076)
 
-<!-- Add your LinkedIn once you're ready:
-     Built by **Rachel Beecham** · [GitHub](https://github.com/rbeecham1076) · [LinkedIn](YOUR-URL)
--->
+---
+
+## Why I built this
+
+My background is in business operations and process improvement, and I am now pursuing a B.S. in Computer Science through the Business & AI pathway. I wanted to build something around a real operational problem I already understood: customer messages arrive in inconsistent formats, and someone still has to interpret the request, determine priority, route it correctly, and prepare a response.
+
+This project explores how AI can handle that repetitive first-pass organization **without removing human judgment from the workflow**.
+
+## What this demonstrates
+
+- Translating a real business problem into a working software workflow
+- Using an LLM for structured extraction rather than open-ended chat
+- Human-in-the-loop AI design
+- Validation and safe defaults around model output
+- Python application design with separated UI, AI, and persistence layers
+- SQLite-backed workflow state and operational reporting
+- Configurable Gemini/OpenAI model providers
 
 ---
 
@@ -55,7 +69,7 @@ Every field is editable. Nothing is final until a person clicks **Approve**.
 
 ## The workflow
 
-```
+```text
 New Inquiry  →  AI Analysis  →  Human Review  →  Approved Task
 ```
 
@@ -92,7 +106,7 @@ The human review step is the point of the project, not an afterthought. The AI i
 
 Five files, each with one job:
 
-```
+```text
 app.py         Interface and the review workflow
 ai.py          Provider selection, the prompt, and validation of the response
 db.py          SQLite storage: save, update, and query inquiries
@@ -143,7 +157,7 @@ pip install -r requirements.txt
 
 **4. Set an API key**
 
-The app uses Google Gemini by default — the free tier requires no credit card. Create a key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey).
+The app uses Google Gemini by default. Create a key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey).
 
 macOS / Linux:
 
