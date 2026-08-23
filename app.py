@@ -19,7 +19,8 @@ from styles import CUSTOM_CSS, render_hero, render_footer, stat_cards, status_ba
 # below and they'll appear as links; leave one blank and it's skipped.
 AUTHOR_NAME = "Rachel Beecham"
 AUTHOR_LINKS = {
-    "GitHub": "",
+    "GitHub": "https://github.com/rbeecham1076",
+    # Add your LinkedIn URL here and it appears automatically.
     "LinkedIn": "",
 }
 

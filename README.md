@@ -2,9 +2,11 @@
 
 Turns unstructured customer messages into structured, reviewable support tasks — with a human approving every result before it counts.
 
-Built by **Rachel Beecham** · [GitHub](#) · [LinkedIn](#)
+Built by **Rachel Beecham** · [GitHub](https://github.com/rbeecham1076)
 
-<!-- Replace the (#) placeholders above with your real profile URLs. -->
+<!-- Add your LinkedIn once you're ready:
+     Built by **Rachel Beecham** · [GitHub](https://github.com/rbeecham1076) · [LinkedIn](YOUR-URL)
+-->
 
 ---
 
@@ -113,7 +115,7 @@ styles.py      The visual design layer
 **1. Clone and enter the project**
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/ai-customer-inquiry-organizer.git
+git clone https://github.com/rbeecham1076/ai-customer-inquiry-organizer.git
 cd ai-customer-inquiry-organizer
 ```
 
