@@ -195,11 +195,21 @@ def describe_error(exc: Exception, provider: dict) -> str:
             f"Add billing credit, or switch providers by setting AI_PROVIDER."
         )
 
-    if "401" in text or "API key not valid" in text or "invalid_api_key" in text:
+    # Providers disagree on the status code for a bad key - OpenAI returns
+    # 401, Google returns 400 - so match on the wording too.
+    key_problems = (
+        "401",
+        "api key not valid",
+        "pass a valid api key",
+        "invalid_api_key",
+        "api_key_invalid",
+    )
+    if any(phrase in text.lower() for phrase in key_problems):
         return (
             f"{provider['label']} rejected the API key. Check that "
-            f"{provider['key_env']} is set correctly - you can create a key at "
-            f"{provider['signup_url']}"
+            f"{provider['key_env']} holds your real key - if you pasted a "
+            "placeholder, or opened a new terminal since setting it, that's "
+            f"the cause. You can create a key at {provider['signup_url']}"
         )
 
     if "429" in text:

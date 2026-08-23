@@ -124,6 +124,14 @@ html, body, [class*="css"], .stMarkdown, .stTextInput, .stTextArea, .stSelectbox
     margin: 0;
 }
 
+/* Streamlit adds a clickable anchor link to any heading it renders. That's
+   useful for long documents but it puts a stray chain icon in the middle of
+   our hero, so hide it on the headings we style ourselves. */
+.hero-title a,
+.section-title a {
+    display: none !important;
+}
+
 /* ---------- Workflow stage pills ---------- */
 
 .workflow {
